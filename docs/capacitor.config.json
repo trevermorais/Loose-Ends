@@ -1,0 +1,9 @@
+{
+  "appId": "com.kennoldesigns.looseends",
+  "appName": "Loose Ends",
+  "webDir": "www",
+  "backgroundColor": "#0d1013",
+  "plugins": {
+    "StatusBar": { "style": "DARK", "overlaysWebView": true }
+  }
+}
