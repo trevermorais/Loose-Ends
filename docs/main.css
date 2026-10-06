@@ -1,0 +1,78 @@
+@font-face{font-family:'Bebas Neue';font-weight:400;font-style:normal;font-display:swap;src:url('../fonts/bebas-neue-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-weight:400;font-style:normal;font-display:swap;src:url('../fonts/barlow-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-weight:500;font-style:normal;font-display:swap;src:url('../fonts/barlow-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-weight:600;font-style:normal;font-display:swap;src:url('../fonts/barlow-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-weight:700;font-style:normal;font-display:swap;src:url('../fonts/barlow-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:400;font-style:normal;font-display:swap;src:url('../fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:500;font-style:normal;font-display:swap;src:url('../fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:700;font-style:normal;font-display:swap;src:url('../fonts/jetbrains-mono-latin-700-normal.woff2') format('woff2');}
+
+:root {
+  /* --- design tokens --- */
+  --bg-void: #0d1013;
+  --bg-panel: #181d23;
+  --bg-panel-raised: #212832;
+  --line: #2c3542;
+  --ember: #f2a541;      /* amber / draw-string / currency */
+  --ember-dim: #a8722d;
+  --blood: #e2484f;      /* health */
+  --stamina: #3fa9e0;    /* stamina */
+  --venom: #7fd858;      /* upgrade / unlock */
+  --ink: #e9e7e0;
+  --ink-dim: #8b93a1;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg-void);
+  color: var(--ink);
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 2px;
+}
+
+.mono { font-family: var(--font-mono); }
+
+/* subtle scanline / vignette texture used on both screens */
+.vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%);
+}
+
+::selection { background: var(--ember); color: #14171c; }
+
+/* --- mobile / app polish --- */
+html, body { -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none;
+  overscroll-behavior: none; touch-action: none; }
+:root { --safe-t: env(safe-area-inset-top, 0px); --safe-r: env(safe-area-inset-right, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px); --safe-l: env(safe-area-inset-left, 0px); }
+
+/* portrait phones: ask the player to rotate (the app is landscape-only) */
+.rotate-hint { display: none; }
+@media (orientation: portrait) and (pointer: coarse) {
+  .rotate-hint { display: flex; position: fixed; inset: 0; z-index: 999; background: var(--bg-void);
+    color: var(--ink); align-items: center; justify-content: center; text-align: center;
+    font-family: var(--font-display); font-size: 28px; letter-spacing: 2px; padding: 24px; }
+}
