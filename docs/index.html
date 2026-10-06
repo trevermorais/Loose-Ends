@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0d1013" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <title>Loose Ends &mdash; Training Grounds</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+  <div class="rotate-hint">Rotate your phone<br />to landscape</div>
+
+  <div class="menu-screen">
+
+    <div class="topbar">
+      <div>
+        <span class="stat-pill kill"><span class="icon">☠</span><span id="killCount" class="mono">0</span></span>
+        <span class="stat-pill coin"><span class="icon">◆</span><span id="coinCount" class="mono">0</span></span>
+      </div>
+      <div class="brand">LOOSE <span>ENDS</span></div>
+      <div class="round-info">
+        BEST RUN<br /><b id="bestRun">0 / 35</b><br />
+        <a class="mono" href="privacy.html" style="font-size:11px;color:var(--ink-dim);">privacy</a>
+      </div>
+    </div>
+
+    <!-- LEFT: armory / upgrades -->
+    <div class="panel left">
+      <h2>Armory</h2>
+      <div id="upgradeList"></div>
+    </div>
+
+    <!-- CENTER: character stage -->
+    <div class="stage vignette">
+      <canvas id="previewCanvas" width="200" height="300"></canvas>
+      <div class="stage-name">Your Archer</div>
+      <div class="stage-bars">
+        <div class="bar-track"><div class="bar-fill health" id="previewHealth" style="width:100%"></div></div>
+        <div class="bar-track"><div class="bar-fill stamina" id="previewStamina" style="width:100%"></div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: arsenal / arrow types -->
+    <div class="panel right">
+      <h2>Arsenal</h2>
+      <div id="weaponList"></div>
+    </div>
+
+    <div class="bottombar">
+      <button class="play-btn" id="playBtn">Enter The Arena</button>
+    </div>
+    <div class="hint">
+      All rights reserved
+      2026/27 Loose Ends
+    </div>
+
+  </div>
+
+  <script src="menu.js"></script>
+  <script src="register-sw.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0d1013" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <title>Loose Ends &mdash; The Arena</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <div class="rotate-hint">Rotate your phone<br />to landscape</div>
+
+  <div class="game-screen">
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="hud">
+      <div class="hud-corner left">
+        <div class="hud-name">You</div>
+        <div class="bar-track"><div class="bar-fill health" id="playerHealthBar" style="width:100%"></div></div>
+        <div class="bar-track"><div class="bar-fill stamina" id="playerStaminaBar" style="width:100%"></div></div>
+      </div>
+
+      <div class="hud-corner right">
+        <div class="hud-name" id="enemyName">Rival</div>
+        <div class="bar-track"><div class="bar-fill health" id="enemyHealthBar" style="width:100%"></div></div>
+      </div>
+
+      <div class="hud-center">
+        <div class="hud-round">ROUND <b id="roundNum">1</b> &nbsp;·&nbsp; SCORE <b id="scoreNum">0</b>/35</div>
+      </div>
+
+      <div class="hud-coins">◆ <span id="hudCoins">0</span></div>
+
+      <div class="hud-controls">
+        <span class="kbd-hint">drag from your archer to draw &amp; aim<br />
+        A / D &mdash; move &nbsp;·&nbsp; W / space &mdash; jump<br />
+        Esc &mdash; back to training grounds</span>
+        <span class="touch-hint">drag from your archer to aim &amp; release to fire</span>
+      </div>
+    </div>
+
+    <!-- on-screen controls, shown on touch devices only -->
+    <div class="touch-controls">
+      <div class="tc-group">
+        <button class="tc-btn" data-key="a" aria-label="Move left">&#9664;</button>
+        <button class="tc-btn" data-key="d" aria-label="Move right">&#9654;</button>
+      </div>
+      <div class="tc-group">
+        <button class="tc-btn tc-jump" data-key="w" aria-label="Jump">&#9650;</button>
+      </div>
+      <button class="tc-menu" id="pauseMenuBtn" aria-label="Back to training grounds">&#10005;</button>
+    </div>
+
+    <div class="round-banner" id="roundBanner">ROUND 1</div>
+
+    <div class="overlay" id="loseOverlay">
+      <h1 class="lose">You Fell</h1>
+      <p id="loseStats">Reached round 1 &middot; earned 0 ◆</p>
+      <div class="btn-row">
+        <button id="retryBtn">Retry</button>
+        <button class="secondary" id="loseMenuBtn">Training Grounds</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="winOverlay">
+      <h1 class="win">Arena Cleared</h1>
+      <p id="winStats">35 rounds survived</p>
+      <div class="btn-row">
+        <button id="playAgainBtn">Play Again</button>
+        <button class="secondary" id="winMenuBtn">Training Grounds</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="physics.js"></script>
+  <script src="game.js"></script>
+  <script src="register-sw.js"></script>
+</body>
+</html>

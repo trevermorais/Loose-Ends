@@ -1,11 +1,11 @@
-@font-face{font-family:'Bebas Neue';font-weight:400;font-style:normal;font-display:swap;src:url('../fonts/bebas-neue-latin-400-normal.woff2') format('woff2');}
-@font-face{font-family:'Barlow';font-weight:400;font-style:normal;font-display:swap;src:url('../fonts/barlow-latin-400-normal.woff2') format('woff2');}
-@font-face{font-family:'Barlow';font-weight:500;font-style:normal;font-display:swap;src:url('../fonts/barlow-latin-500-normal.woff2') format('woff2');}
-@font-face{font-family:'Barlow';font-weight:600;font-style:normal;font-display:swap;src:url('../fonts/barlow-latin-600-normal.woff2') format('woff2');}
-@font-face{font-family:'Barlow';font-weight:700;font-style:normal;font-display:swap;src:url('../fonts/barlow-latin-700-normal.woff2') format('woff2');}
-@font-face{font-family:'JetBrains Mono';font-weight:400;font-style:normal;font-display:swap;src:url('../fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2');}
-@font-face{font-family:'JetBrains Mono';font-weight:500;font-style:normal;font-display:swap;src:url('../fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');}
-@font-face{font-family:'JetBrains Mono';font-weight:700;font-style:normal;font-display:swap;src:url('../fonts/jetbrains-mono-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'Bebas Neue';font-weight:400;font-style:normal;font-display:swap;src:url('bebas-neue-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-weight:400;font-style:normal;font-display:swap;src:url('barlow-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-weight:500;font-style:normal;font-display:swap;src:url('barlow-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-weight:600;font-style:normal;font-display:swap;src:url('barlow-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-weight:700;font-style:normal;font-display:swap;src:url('barlow-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:400;font-style:normal;font-display:swap;src:url('jetbrains-mono-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:500;font-style:normal;font-display:swap;src:url('jetbrains-mono-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:700;font-style:normal;font-display:swap;src:url('jetbrains-mono-latin-700-normal.woff2') format('woff2');}
 
 :root {
   /* --- design tokens --- */

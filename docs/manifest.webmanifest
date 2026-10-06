@@ -1,0 +1,30 @@
+{
+  "id": "loose-ends",
+  "name": "Loose Ends",
+  "short_name": "Loose Ends",
+  "description": "A 2D ragdoll archery duel. Upgrade your archer and survive 35 rounds.",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0d1013",
+  "theme_color": "#0d1013",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
