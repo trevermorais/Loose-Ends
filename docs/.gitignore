@@ -1,5 +1,0 @@
-node_modules/
-android/app/build/
-ios/App/Pods/
-*.keystore
-*.jks
