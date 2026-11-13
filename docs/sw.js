@@ -1,5 +1,5 @@
 // Cache-first service worker so the game runs fully offline as a PWA / Microsoft Store app.
-const CACHE = "loose-ends-v1";
+const CACHE = "loose-ends-v2";
 const FILES = [
   "index.html", "game.html", "privacy.html", "manifest.webmanifest",
   "main.css", "menu.css", "game.css",
