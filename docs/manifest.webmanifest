@@ -9,6 +9,14 @@
   "orientation": "landscape",
   "background_color": "#0d1013",
   "theme_color": "#0d1013",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["games", "entertainment"],
+  "screenshots": [
+    { "src": "screenshots/menu.png",  "sizes": "1280x720", "type": "image/png", "form_factor": "wide", "label": "Upgrade your archer and pick a weapon" },
+    { "src": "screenshots/arena.png", "sizes": "1280x720", "type": "image/png", "form_factor": "wide", "label": "Face your rival in the arena" },
+    { "src": "screenshots/duel.png",  "sizes": "1280x720", "type": "image/png", "form_factor": "wide", "label": "Draw, aim and survive 35 rounds" }
+  ],
   "icons": [
     {
       "src": "icon-192.png",
